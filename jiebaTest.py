@@ -1,11 +1,11 @@
 # encoding=utf-8
 
 import jieba
+
 import nltk
-from nltk.corpus import PlaintextCorpusReader
-from nltk import text
+
 # 精确模式，试图将句子最精确地切开，适合文本分析；
-#全模式，把句子中所有的可以成词的词语都扫描出来, 速度非常快，但是不能解决歧义；
+# 全模式，把句子中所有的可以成词的词语都扫描出来, 速度非常快，但是不能解决歧义；
 #搜索引擎模式，在精确模式的基础上，对长词再次切分，提高召回率，适合用于搜索引擎分词。
 
 seg_list1 = jieba.cut(
@@ -35,9 +35,11 @@ print len(mytexts._texts)
 print len(mytexts)
 
 the_set = set(sinica_text)
-print len(the_set)
+print
+len(the_set)
 for tmp in the_set:
-    print tmp, "tf", mytexts.tf(tmp, str1), "idf", mytexts.idf(tmp), mytexts.tf_idf(tmp, str2)
+    print
+    tmp, "tf", mytexts.tf(tmp, str1), "idf", mytexts.idf(tmp), mytexts.tf_idf(tmp, str2)
 
 # nltk的贝叶斯分类器函数使用总结
 # 先定义一个特征提取函数,该函数返回一个dict,其中key为维度名称,value为维度值
